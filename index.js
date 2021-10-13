@@ -1,6 +1,7 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 
+
 inquirer.prompt([
     {
         type: 'input',
@@ -22,4 +23,9 @@ inquirer.prompt([
 
 .then((responses)=>{
     console.log(responses);
+    var nameString = JSON.stringify(responses.employeeName);
+    var emailString = JSON.stringify(responses.employeeEmail);
+    var githubString = JSON.stringify(responses.employeeGitHub);
+
+    console.log(nameString, emailString, githubString);
 })
